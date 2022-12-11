@@ -4,8 +4,10 @@
     <title>我的天天酷跑-C语言项目</title>
     <url>/posts/2e8d8a6e/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一个简单的C语言小项目，仿照曾经风靡一时的一个小游戏——天天酷跑。我还是初中的时候可喜欢玩这个了，据说现在仍然在运营但是策划为了…你懂的哈哈哈。话不多说，先对项目进行一个规划和设计。</p>
-<h1 id="项目设计"><a href="#项目设计" class="headerlink" title="项目设计"></a>项目设计</h1><p>这款游戏大家应该都有玩过，或者听说过。游戏内容很简单，就是一个横板跑酷类游戏。我使用<strong>visual studio2022</strong>进行开发，使用<strong>easyX</strong>的图形库。</p>
-<p>首先，我们要实现的功能是：</p>
+<h1 id="项目设计"><a href="#项目设计" class="headerlink" title="项目设计"></a>项目设计</h1><p>这款游戏大家应该都有玩过，或者听说过。游戏内容很简单，就是一个横板跑酷类游戏。</p>
+<p>首先，我们要确认游戏需要实现的功能有哪些：</p>
+<span id="more"></span>
+
 <p>载入等待页面；</p>
 <p>等待开始大厅；</p>
 <p>游戏玩家人物奔跑；</p>
@@ -14,27 +16,33 @@
 <p>障碍物难度时间变化机制；</p>
 <p>评分计算机制；</p>
 <p>游戏结束返回；</p>
-<span id="more"></span>
+<p>此外还有一系列小细节，具体在开发的时候一起考虑到。</p>
+<p>接下来，就开始着手开发吧。</p>
+<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>本人使用<strong>visual studio 2022</strong>进行开发，使用<strong>easyX</strong>的图形库。</p>
+<p>具体安装教程可以网络搜索，在此不详细阐述。</p>
+<h1 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h1><h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><p>首先，我们创建一个空项目。</p>
+<p><img src="/%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91.assets/image-20221211165916519.png" alt="创建空项目"></p>
 ]]></content>
       <categories>
         <category>C语言项目实训</category>
       </categories>
       <tags>
-        <tag>C</tag>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
     <title>线性表</title>
     <url>/posts/8aca8f82/</url>
-    <content><![CDATA[<h1 id="线性表的定义和基本操作"><a href="#线性表的定义和基本操作" class="headerlink" title="线性表的定义和基本操作"></a>线性表的定义和基本操作</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>​        <strong>线性表</strong>是具有 <u>相同</u> 数据类型的 n (n&gt;=0)个数据元素的 <u>有限序列</u> 。</p>
-<p>​        特点如下：</p>
+    <content><![CDATA[<h1 id="线性表的定义和基本操作"><a href="#线性表的定义和基本操作" class="headerlink" title="线性表的定义和基本操作"></a>线性表的定义和基本操作</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>​		<strong>线性表</strong>是具有 <u>相同</u> 数据类型的 n (n&gt;&#x3D;0)个数据元素的 <u>有限序列</u> 。</p>
+<p>​		特点如下：</p>
 <p><strong>元素个数有限</strong></p>
 <p><strong>元素具有逻辑上的顺序性，有先后次序</strong></p>
 <p><strong>元素都是数据元素，每个元素都是单个元素</strong></p>
 <p><strong>元素的数据类型都相同</strong></p>
 <p><strong>元素具有抽象性</strong></p>
 <span id="more"></span>
-<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>​        最核心，最基本的操作，一般有以下几个：</p>
+
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>​		最核心，最基本的操作，一般有以下几个：</p>
 <p><strong>InitList</strong>：初始化</p>
 <p><strong>Length</strong>：求表长</p>
 <p><strong>LocateElem</strong>： 按值查找</p>
@@ -44,41 +52,51 @@
 <p><strong>PrintList</strong>：输出</p>
 <p><strong>Empty</strong>：判空</p>
 <p><strong>DestroyList</strong>：销毁</p>
-<h1 id="线性表的顺序表示"><a href="#线性表的顺序表示" class="headerlink" title="线性表的顺序表示"></a>线性表的顺序表示</h1><h2 id="顺序表定义"><a href="#顺序表定义" class="headerlink" title="顺序表定义"></a>顺序表定义</h2><p>​        线性表的顺序表示，即为<strong>顺序表</strong>。为一组地址连续的存储单元一次存储线性表中的数据元素，是逻辑上相邻的元素在物理位置上也相邻。</p>
-<p>​        特点为<u>表中元素的逻辑顺序和物理顺序相同</u>。</p>
-<p>​        一般的，使用C语言描述线性表的顺序存储类型为：</p>
+<h1 id="线性表的顺序表示"><a href="#线性表的顺序表示" class="headerlink" title="线性表的顺序表示"></a>线性表的顺序表示</h1><h2 id="顺序表定义"><a href="#顺序表定义" class="headerlink" title="顺序表定义"></a>顺序表定义</h2><p>​		线性表的顺序表示，即为<strong>顺序表</strong>。为一组地址连续的存储单元一次存储线性表中的数据元素，是逻辑上相邻的元素在物理位置上也相邻。</p>
+<p>​		特点为<u>表中元素的逻辑顺序和物理顺序相同</u>。</p>
+<p>​		一般的，使用C语言描述线性表的顺序存储类型为：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MaxSize 50            <span class="comment">//定义顺序表的最大长度</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType data[MaxSize];   <span class="comment">//顺序表的元素</span></span><br><span class="line">    <span class="type">int</span> length;               <span class="comment">//顺序表的当前长度</span></span><br><span class="line">&#125;SqList;                      <span class="comment">//顺序表的类型定义</span></span><br></pre></td></tr></table></figure>
-<p>​        一维数组可以是<strong>静态分配</strong>，也可以作<strong>动态分配</strong>。</p>
+
+<p>​		一维数组可以是<strong>静态分配</strong>，也可以作<strong>动态分配</strong>。</p>
 <p>动态分配描述如下：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> InitSize 100            <span class="comment">//表长度的初始定义</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType *data;             <span class="comment">//指示动态分配数组的指针</span></span><br><span class="line">    <span class="type">int</span> MaxSize,length;         <span class="comment">//数组的最大容量和当前个数</span></span><br><span class="line">&#125;SqList;                        <span class="comment">//动态分配数组顺序表的类型定义</span></span><br></pre></td></tr></table></figure>
+
 <p>C的初始动态分配语句为</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">L.data=(ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*InitSize);</span><br></pre></td></tr></table></figure>
+
 <p>C++的初始动态分配语句为</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">L.data=new ElemType[InitSize];</span><br></pre></td></tr></table></figure>
+
+
+
 <p><u>tips:</u></p>
 <p><u>动态分配仍然为顺序存储结构，物理结构并没有发生改变，依然是随机存取方式。</u></p>
-<p>​        顺序表的最主要特点是<strong>随机访问</strong>，即可以通过首地址和元素序号可在时间O(1)内找到指定元素。</p>
-<p>​        顺序表的存储密度高，<strong>每个结点只存储数据元素</strong>。</p>
-<p>​        顺序表<strong>逻辑上相邻的元素物理上也相邻</strong>，所以插入和删除操作需要大量移动元素。</p>
-<h2 id="基本操作的实现"><a href="#基本操作的实现" class="headerlink" title="基本操作的实现"></a>基本操作的实现</h2><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>​        在顺序表L的i <em>(1&lt;=i&lt;=L.length+1)</em>的位置上插入新元素e。若i的输入不合法，则返回false，表示插入失败；否则，将第i个元素及其后的所有元素依次往后移动一个位置，腾出一个空位置插入新元素e，顺序表长度增长1,插入成功，返回true。</p>
+<p>​		顺序表的最主要特点是<strong>随机访问</strong>，即可以通过首地址和元素序号可在时间O(1)内找到指定元素。</p>
+<p>​		顺序表的存储密度高，<strong>每个结点只存储数据元素</strong>。</p>
+<p>​		顺序表<strong>逻辑上相邻的元素物理上也相邻</strong>，所以插入和删除操作需要大量移动元素。</p>
+<h2 id="基本操作的实现"><a href="#基本操作的实现" class="headerlink" title="基本操作的实现"></a>基本操作的实现</h2><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>​		在顺序表L的i *(1&lt;&#x3D;i&lt;&#x3D;L.length+1)*的位置上插入新元素e。若i的输入不合法，则返回false，表示插入失败；否则，将第i个元素及其后的所有元素依次往后移动一个位置，腾出一个空位置插入新元素e，顺序表长度增长1,插入成功，返回true。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">ListInsert</span><span class="params">(Sqlist &amp;L,<span class="type">int</span> i,ElemType e)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;L.length+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(L.length&gt;=MaxSize)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=L.length;j&gt;=<span class="number">1</span>;j--)</span><br><span class="line">    &#123;</span><br><span class="line">        L.data[j]=L.data[j<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    L.data[i<span class="number">-1</span>]=e;</span><br><span class="line">    L.length++;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>最好情况</strong>：在表尾插入，元素后移语句将不执行，时间复杂度为O(1)。</p>
 <p><strong>最坏情况</strong>：在表首插入，元素后移执行n次，时间复杂为O(n)。</p>
 <p><strong>平均情况：O(n)</strong></p>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>​        删除表L中第i个位置的元素，用引用变量e返回。若i的输入不合法，则返回false，表示删除失败；否则，将被删除元素赋予引用变量e，并将第i+1个元素及其后的所有元素依次往前移动一个位置，返回true。</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>​		删除表L中第i个位置的元素，用引用变量e返回。若i的输入不合法，则返回false，表示删除失败；否则，将被删除元素赋予引用变量e，并将第i+1个元素及其后的所有元素依次往前移动一个位置，返回true。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">ListDelete</span><span class="params">(Sqlist &amp;L,ElemType e,<span class="type">int</span> i)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;L.length)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(L.length&lt;=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    e=L.data[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;L.length;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        L.data[j<span class="number">-1</span>]=L.data[j];</span><br><span class="line">    &#125;</span><br><span class="line">    L.length--;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>最好情况</strong>：删除表尾元素，不执行移动元素，时间复杂度为O(1)。</p>
 <p><strong>最坏情况</strong>：删除表头，执行n次移动元素，时间复杂为O(n)。</p>
 <p><strong>平均情况：O(n)</strong></p>
-<h3 id="按值查找（顺序查找）"><a href="#按值查找（顺序查找）" class="headerlink" title="按值查找（顺序查找）"></a>按值查找（顺序查找）</h3><p>​        在顺序表L中查找第一个元素值等于e的元素，并返回其位序。</p>
+<h3 id="按值查找（顺序查找）"><a href="#按值查找（顺序查找）" class="headerlink" title="按值查找（顺序查找）"></a>按值查找（顺序查找）</h3><p>​		在顺序表L中查找第一个元素值等于e的元素，并返回其位序。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">LocateElem</span><span class="params">(SqList L,ElemType e)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;L.length;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(L.data[i]==e)</span><br><span class="line">            <span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <p><strong>最好情况</strong>：需要查找元素就在表头，时间复杂度为O(1)。</p>
 <p><strong>最坏情况</strong>：查找的元素在表尾，需要比较n次，时间复杂为O(n)。</p>
 <p><strong>平均情况：O(n)</strong></p>
-<h1 id="线性表的链式表示"><a href="#线性表的链式表示" class="headerlink" title="线性表的链式表示"></a>线性表的链式表示</h1><h2 id="单链表的定义"><a href="#单链表的定义" class="headerlink" title="单链表的定义"></a>单链表的定义</h2><p>​        线性表的链式存储又称为的单链表，指通过一组任意的存储单元来存储线性表的数据元素。</p>
-<p>​        为了建立数据元素之间的线性关系，对每个链表结点，除存放元素自身的信息外，还需存放一个指向其后继的指针。</p>
+<h1 id="线性表的链式表示"><a href="#线性表的链式表示" class="headerlink" title="线性表的链式表示"></a>线性表的链式表示</h1><h2 id="单链表的定义"><a href="#单链表的定义" class="headerlink" title="单链表的定义"></a>单链表的定义</h2><p>​		线性表的链式存储又称为的单链表，指通过一组任意的存储单元来存储线性表的数据元素。</p>
+<p>​		为了建立数据元素之间的线性关系，对每个链表结点，除存放元素自身的信息外，还需存放一个指向其后继的指针。</p>
 <p>单链表结点结构如下表</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -86,53 +104,59 @@
 <th>next</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
 </table>
-</div>
 <p>data为数据域，存放数据元素；next为指针域，存放后继结点的地址。</p>
 <p>单链表中结点类型的描述如下：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">    ELemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LNode,*LinkList;</span><br></pre></td></tr></table></figure>
-<p>​        单链表可以解决顺序表需要大量连续存储单元的缺点，但单链表附加指针域，也存在浪费存储空间的缺点。且由于单链表离散的分布在存储空间中，所以单链表是<strong>非随机存取</strong>的存储结构，即不能直接找到表中某个特定结点。</p>
-<p>​        通常用一个头指针来标识一个单链表，如单链表<strong>L</strong>，头指针为<strong><em>NULL</em></strong>时表示一个空表。此外，为了操作上的方便，在单链表第一个结点之前附加一个结点，称为<strong>头结点</strong>。头结点的数据域可以不设任何信息，也可以记录表长，也可以记录表长等信息。</p>
-<p>​        头结点和头指针的区分：</p>
-<p>​        不管带不带头结点，头指针始终指向链表第一个结点，而头结点是带头结点的链表中的第一个头结点，结点内通常不存储信息。</p>
-<p>​        </p>
-<p>​        引入头结点后，有两个<strong>优点</strong>：</p>
+
+<p>​		单链表可以解决顺序表需要大量连续存储单元的缺点，但单链表附加指针域，也存在浪费存储空间的缺点。且由于单链表离散的分布在存储空间中，所以单链表是<strong>非随机存取</strong>的存储结构，即不能直接找到表中某个特定结点。</p>
+<p>​		通常用一个头指针来标识一个单链表，如单链表<strong>L</strong>，头指针为<em><strong>NULL</strong></em>时表示一个空表。此外，为了操作上的方便，在单链表第一个结点之前附加一个结点，称为<strong>头结点</strong>。头结点的数据域可以不设任何信息，也可以记录表长，也可以记录表长等信息。</p>
+<p>​		头结点和头指针的区分：</p>
+<p>​		不管带不带头结点，头指针始终指向链表第一个结点，而头结点是带头结点的链表中的第一个头结点，结点内通常不存储信息。</p>
+<p>​		</p>
+<p>​		引入头结点后，有两个<strong>优点</strong>：</p>
 <p>1.由于第一个数据结点的位置被存放在头结点的指针域中，因此在链表的第一个位置上的操作和在表中的其他位置上操作一致，不需要特殊处理。</p>
 <p>2.无论链表是否为空，其头指针都指向头结点的非空指针（空表中头结点的指针域为空），因此空表和非空表的处理也就得到了统一。</p>
 <h2 id="单链表基本操作的实现"><a href="#单链表基本操作的实现" class="headerlink" title="单链表基本操作的实现"></a>单链表基本操作的实现</h2><h3 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">LinkList <span class="title function_">List_HeadInsert</span><span class="params">(Linklist &amp;L)</span>&#123;          <span class="comment">//逆向建立单链表</span></span><br><span class="line">    LNode *s;<span class="type">int</span> x;</span><br><span class="line">    L=(LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));          <span class="comment">//创立头结点</span></span><br><span class="line">    L-next=<span class="literal">NULL</span>;                                <span class="comment">//初始为空链表</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">    <span class="keyword">while</span>(x!=<span class="number">9999</span>)&#123;                             <span class="comment">//输入9999表示结束</span></span><br><span class="line">        s=(LNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));        <span class="comment">//创建新结点</span></span><br><span class="line">        s-&gt;data=x;</span><br><span class="line">        s-&gt;next=L-&gt;next;</span><br><span class="line">        L-next=s;                               <span class="comment">//将新结点插入表中，L为头指针</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>使用头插法建立单链表时，读入数据的顺序与生成的链表中的元素是相反的。每个节点插入时间为O(1)，设单链表长为n，则总时间复杂度为O(n)。</p>
 <h3 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">LinkList <span class="title function_">List_TailInsert</span><span class="params">(LinkList &amp;L)</span>&#123;   <span class="comment">//正向建立单链表</span></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    L=(LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));   </span><br><span class="line">    LNode *s,*r=L;                       <span class="comment">//r为表尾指针</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);             </span><br><span class="line">    <span class="keyword">while</span>(x!=<span class="number">9999</span>)&#123;</span><br><span class="line">        s-&gt;data=x;</span><br><span class="line">        r-&gt;next=s;</span><br><span class="line">        r=s;                             <span class="comment">//r指向新的表尾指针</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">    &#125;</span><br><span class="line">    r-&gt;next=<span class="literal">NULL</span>;                        <span class="comment">//尾结点置空</span></span><br><span class="line">    <span class="keyword">return</span> L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>时间复杂度与头插法相同。</p>
-<h3 id="按序号查找结点值"><a href="#按序号查找结点值" class="headerlink" title="按序号查找结点值"></a>按序号查找结点值</h3><p>​        从第一个结点出发，顺指针next域逐一往下搜索，直至找到第i个结点位置，否则返回最后一个结点指针域NULL。</p>
+<h3 id="按序号查找结点值"><a href="#按序号查找结点值" class="headerlink" title="按序号查找结点值"></a>按序号查找结点值</h3><p>​		从第一个结点出发，顺指针next域逐一往下搜索，直至找到第i个结点位置，否则返回最后一个结点指针域NULL。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">LNode *<span class="title function_">GetElem</span><span class="params">(LinkList L,<span class="type">int</span> i)</span>&#123;</span><br><span class="line">    <span class="type">int</span> j=<span class="number">1</span>;</span><br><span class="line">    LNode *p=L-&gt;next;                <span class="comment">//第1个结点指针赋予p</span></span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> L;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span>(p&amp;&amp;j&lt;i)</span><br><span class="line">    &#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        j++:</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>按序号查找操作的时间复杂度为O(n)。</p>
-<h3 id="按值查找表结点"><a href="#按值查找表结点" class="headerlink" title="按值查找表结点"></a>按值查找表结点</h3><p>​        从第一个结点开始，由前往后依次比较表中各结点数据域的值，若某结点数据域的值等于给定值e，则返回该结点的指针；若整个单链表中无该结点，则返回NULL。</p>
+<h3 id="按值查找表结点"><a href="#按值查找表结点" class="headerlink" title="按值查找表结点"></a>按值查找表结点</h3><p>​		从第一个结点开始，由前往后依次比较表中各结点数据域的值，若某结点数据域的值等于给定值e，则返回该结点的指针；若整个单链表中无该结点，则返回NULL。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">LNode *<span class="title function_">LocateElem</span><span class="params">(LinkList L,ElemType e)</span>&#123;</span><br><span class="line">    LNode *p=L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;data!=e)                <span class="comment">//从第1个结点开始查找data域为e的结点</span></span><br><span class="line">    &#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>时间复杂度为O(n)。</p>
-<h3 id="插入结点操作"><a href="#插入结点操作" class="headerlink" title="插入结点操作"></a>插入结点操作</h3><p>​        首先调用按序号查找算法GetElem(L,i-1)，查找第i-1个结点。假设返回的第i-1个结点为  <em>p ，然后令新结点 </em>s的指针域指向 <em>p的后继结点，再令结点 </em>p的指针域指向新插入的结点 *s。</p>
+<h3 id="插入结点操作"><a href="#插入结点操作" class="headerlink" title="插入结点操作"></a>插入结点操作</h3><p>​		首先调用按序号查找算法GetElem(L,i-1)，查找第i-1个结点。假设返回的第i-1个结点为  *p ，然后令新结点 *s的指针域指向 *p的后继结点，再令结点 *p的指针域指向新插入的结点 *s。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">p=GetElem(L,i<span class="number">-1</span>);</span><br><span class="line">s-&gt;next=p-&gt;next;</span><br><span class="line">p-&gt;next=s;</span><br></pre></td></tr></table></figure>
-<p>​        算法的主要时间开销在于查找第i-1个元素，时间复杂度为O(n)。若在给定的结点后面插入新结点，则时间复杂度仅为O(1)。</p>
-<p>​        <strong>扩展：对某一结点进行前插操作</strong></p>
-<p>​        前插操作是指在某一结点前面插入一个新结点。后插操作与之相反。在单链表插入算法中，通常采用后插操作。</p>
-<p>​        首先调用GetElem()找到第i-1个结点，即插入结点的前驱结点，再对其执行后插操作。由此，对结点的前插均可转化为后插操作，前提是从单链表的头结点开始顺序查找到其前驱结点，时间复杂度为O(n)。</p>
-<p>​        此外，可采用另一种方式将其转化为后插操作来实现，设待插入结点为 <em>s，将 </em>s插入到 <em>p的前面。我们仍然将 </em>s插入到 *p的后面，然后将p-&gt;data和s-&gt;data交换，这样既满足了逻辑关系，也使得时间复杂度为O(1)。</p>
+
+<p>​		算法的主要时间开销在于查找第i-1个元素，时间复杂度为O(n)。若在给定的结点后面插入新结点，则时间复杂度仅为O(1)。</p>
+<p>​		<strong>扩展：对某一结点进行前插操作</strong></p>
+<p>​		前插操作是指在某一结点前面插入一个新结点。后插操作与之相反。在单链表插入算法中，通常采用后插操作。</p>
+<p>​		首先调用GetElem()找到第i-1个结点，即插入结点的前驱结点，再对其执行后插操作。由此，对结点的前插均可转化为后插操作，前提是从单链表的头结点开始顺序查找到其前驱结点，时间复杂度为O(n)。</p>
+<p>​		此外，可采用另一种方式将其转化为后插操作来实现，设待插入结点为 *s，将 *s插入到 *p的前面。我们仍然将 *s插入到 *p的后面，然后将p-&gt;data和s-&gt;data交换，这样既满足了逻辑关系，也使得时间复杂度为O(1)。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">......<span class="comment">//将*s的结点插入到*p之前的主要代码片段</span></span><br><span class="line">s-&gt;next=p-&gt;next;</span><br><span class="line">p-&gt;next=s;</span><br><span class="line">temp=p-&gt;data;</span><br><span class="line">p-&gt;data=s-&gt;data;</span><br><span class="line">s-&gt;data=temp;</span><br></pre></td></tr></table></figure>
-<h3 id="删除结点操作"><a href="#删除结点操作" class="headerlink" title="删除结点操作"></a>删除结点操作</h3><p>​        先检查删除位置的合法性，后查找第i-1个结点，即被删除结点的前驱结点，再将其删除。</p>
+
+
+
+<h3 id="删除结点操作"><a href="#删除结点操作" class="headerlink" title="删除结点操作"></a>删除结点操作</h3><p>​		先检查删除位置的合法性，后查找第i-1个结点，即被删除结点的前驱结点，再将其删除。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">p=GetElem(L,i<span class="number">-1</span>);            <span class="comment">//找到被删除结点的前驱结点</span></span><br><span class="line">q=p-&gt;next;                   <span class="comment">//令q指向被删除结点</span></span><br><span class="line">p-&gt;next=q-&gt;next;             <span class="comment">//将*q结点从链中断开</span></span><br><span class="line"><span class="built_in">free</span>(q);                     <span class="comment">//释放结点存储空间</span></span><br></pre></td></tr></table></figure>
-<p>​        主要时间也主要耗费在查找，时间复杂度为O(n)。</p>
+
+<p>​		主要时间也主要耗费在查找，时间复杂度为O(n)。</p>
 <p><strong>扩展：删除结点*p。</strong></p>
-<p>​        要删除某个给定结点*p。通常是从头结点开始找到其前驱结点，然后删除，时间复杂度为O(n)。</p>
-<p>​        其实，删除结点<em>p的操作可用删除 </em>p的后继结点来实现，实质就是将其后继结点的值赋予其自身，然后删除后继结点，也能使得时间复杂度为O(1)。</p>
+<p>​		要删除某个给定结点*p。通常是从头结点开始找到其前驱结点，然后删除，时间复杂度为O(n)。</p>
+<p>​		其实，删除结点*p的操作可用删除 *p的后继结点来实现，实质就是将其后继结点的值赋予其自身，然后删除后继结点，也能使得时间复杂度为O(1)。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">q=p-&gt;next;</span><br><span class="line">p-&gt;next=p-&gt;next-&gt;data;</span><br><span class="line">p-&gt;next=q-&gt;next;</span><br><span class="line"><span class="built_in">free</span>(q);</span><br></pre></td></tr></table></figure>
-<h3 id="求表长操作"><a href="#求表长操作" class="headerlink" title="求表长操作"></a>求表长操作</h3><p>​        计算单链表中数据结点（不含头结点）的个数，所以需要设置一个计数器变量，每访问一个结点，计数器+1,直至访问到空结点为止。算法的时间复杂度为O(n)。</p>
-<h2 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h2><p>​        单链表结点中只有一个指向其后继的指针，使得单链表只能从头结点依次顺序地向后遍历。要访问某结点的前驱结点是，只能从头遍历。</p>
-<p>​        为了克服上述缺点，引入双链表，双链表结点中有两个指针prior和next，分别指向其前驱结点和后继结点。</p>
-<div class="table-container">
+
+
+
+<h3 id="求表长操作"><a href="#求表长操作" class="headerlink" title="求表长操作"></a>求表长操作</h3><p>​		计算单链表中数据结点（不含头结点）的个数，所以需要设置一个计数器变量，每访问一个结点，计数器+1,直至访问到空结点为止。算法的时间复杂度为O(n)。</p>
+<h2 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h2><p>​		单链表结点中只有一个指向其后继的指针，使得单链表只能从头结点依次顺序地向后遍历。要访问某结点的前驱结点是，只能从头遍历。</p>
+<p>​		为了克服上述缺点，引入双链表，双链表结点中有两个指针prior和next，分别指向其前驱结点和后继结点。</p>
 <table>
 <thead>
 <tr>
@@ -141,24 +165,29 @@
 <th>next</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
 </table>
-</div>
 <p>对于结点描述如下：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span> *<span class="title">prior</span>,*<span class="title">next</span>;</span></span><br><span class="line">&#125;DNode,*DLinklist;</span><br></pre></td></tr></table></figure>
-<p>​        双链表的结点中增加了一个指向其前驱的prior指针，因此双链表中的按值查找和按位查找和单链表操作相同。但插入和删除操作的实现上，与单链表有较大的不同。</p>
-<h3 id="双链表的插入操作"><a href="#双链表的插入操作" class="headerlink" title="双链表的插入操作"></a>双链表的插入操作</h3><p>​        在双链表中p所指的结点之后插入结点*s</p>
+
+
+
+<p>​		双链表的结点中增加了一个指向其前驱的prior指针，因此双链表中的按值查找和按位查找和单链表操作相同。但插入和删除操作的实现上，与单链表有较大的不同。</p>
+<h3 id="双链表的插入操作"><a href="#双链表的插入操作" class="headerlink" title="双链表的插入操作"></a>双链表的插入操作</h3><p>​		在双链表中p所指的结点之后插入结点*s</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">s-&gt;next=p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior=s;</span><br><span class="line">s-&gt;prior=p;</span><br><span class="line">p-&gt;next=s;</span><br></pre></td></tr></table></figure>
-<p>​        语句顺序不是任意的，也不是唯一的。</p>
-<h3 id="双链表的删除操作"><a href="#双链表的删除操作" class="headerlink" title="双链表的删除操作"></a>双链表的删除操作</h3><p>删除双链表中结点<em>p的后继结点 </em>q</p>
+
+<p>​		语句顺序不是任意的，也不是唯一的。</p>
+<h3 id="双链表的删除操作"><a href="#双链表的删除操作" class="headerlink" title="双链表的删除操作"></a>双链表的删除操作</h3><p>删除双链表中结点*p的后继结点 *q</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">p-&gt;next=q-&gt;next;</span><br><span class="line">q-&gt;next-&gt;prior=p;</span><br><span class="line"><span class="built_in">free</span>(q);</span><br></pre></td></tr></table></figure>
-<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><h3 id="循环单链表"><a href="#循环单链表" class="headerlink" title="循环单链表"></a>循环单链表</h3><p>​        循环单链表和单链表的区别在于，表中最后一个结点指针不是NULL，而改为指向头结点，从而整个链表形成一个环。</p>
-<p>​        在循环单链表中，表尾结点*r的next指针域指向L，故表中没有指针域为NULL 的结点，因此，循环单链表的判空条件不是头结点的指针是否为空，而是它是否等于头指针。</p>
-<p>​        循环单链表的插入、删除算法和单链表几乎一样，不同的是若在表尾进行，则执行操作不同，以让单链表继续保持循环的性质。</p>
+
+
+
+
+
+
+
+<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><h3 id="循环单链表"><a href="#循环单链表" class="headerlink" title="循环单链表"></a>循环单链表</h3><p>​		循环单链表和单链表的区别在于，表中最后一个结点指针不是NULL，而改为指向头结点，从而整个链表形成一个环。</p>
+<p>​		在循环单链表中，表尾结点*r的next指针域指向L，故表中没有指针域为NULL 的结点，因此，循环单链表的判空条件不是头结点的指针是否为空，而是它是否等于头指针。</p>
+<p>​		循环单链表的插入、删除算法和单链表几乎一样，不同的是若在表尾进行，则执行操作不同，以让单链表继续保持循环的性质。</p>
 ]]></content>
       <categories>
         <category>数据结构和算法</category>
@@ -174,51 +203,48 @@
   <entry>
     <title>数据结构和算法（一）基本概念</title>
     <url>/posts/2490ac3c/</url>
-    <content><![CDATA[<h1 id="数据结构的基本概念"><a href="#数据结构的基本概念" class="headerlink" title="数据结构的基本概念"></a>数据结构的基本概念</h1><h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><h3 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h3><p>​        是数据的基本单位，一个数据元素可以由若干<strong>数据项</strong>组成。数据项是构成数据元素不可分割的最小单位。</p>
-<h3 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h3><p>​        是具有<strong>相同性质</strong>的数据元素的集合。</p>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="a-原子类型"><a href="#a-原子类型" class="headerlink" title="a.原子类型"></a>a.原子类型</h4><p>​        其值不可在分的数据类型。</p>
-<h4 id="b-结构类型"><a href="#b-结构类型" class="headerlink" title="b.结构类型"></a>b.结构类型</h4><p>​        其值可以再分解成若干成分（分量）的数据类型。</p>
-<h4 id="c-抽象数据类型"><a href="#c-抽象数据类型" class="headerlink" title="c.抽象数据类型"></a>c.抽象数据类型</h4><p>​        抽象数据组织及与之相关的操作。</p>
+    <content><![CDATA[<h1 id="数据结构的基本概念"><a href="#数据结构的基本概念" class="headerlink" title="数据结构的基本概念"></a>数据结构的基本概念</h1><h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><h3 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h3><p>​		是数据的基本单位，一个数据元素可以由若干<strong>数据项</strong>组成。数据项是构成数据元素不可分割的最小单位。</p>
+<h3 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h3><p>​		是具有<strong>相同性质</strong>的数据元素的集合。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="a-原子类型"><a href="#a-原子类型" class="headerlink" title="a.原子类型"></a>a.原子类型</h4><p>​		其值不可在分的数据类型。</p>
+<h4 id="b-结构类型"><a href="#b-结构类型" class="headerlink" title="b.结构类型"></a>b.结构类型</h4><p>​		其值可以再分解成若干成分（分量）的数据类型。</p>
+<h4 id="c-抽象数据类型"><a href="#c-抽象数据类型" class="headerlink" title="c.抽象数据类型"></a>c.抽象数据类型</h4><p>​		抽象数据组织及与之相关的操作。</p>
 <span id="more"></span>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>​        是相互之间存在一种或多种特定关系的数据元素的集合。</p>
+
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>​		是相互之间存在一种或多种特定关系的数据元素的集合。</p>
 <p>数据结构包括三方面：</p>
-<p>​                <strong>（1）逻辑结构</strong></p>
-<p>​                <strong>（2）存储结构</strong></p>
-<p>​                <strong>（3）数据的运算</strong></p>
-<p>​    </p>
-<p>​        数据的逻辑结构和存储结构是密不可分的两个方面，一个算法的设计取决于所选定的逻辑结构，而算法的实现依赖于所采用的存储结构。</p>
-<h2 id="数据结构三要素"><a href="#数据结构三要素" class="headerlink" title="数据结构三要素"></a>数据结构三要素</h2><h3 id="数据的逻辑结构"><a href="#数据的逻辑结构" class="headerlink" title="数据的逻辑结构"></a>数据的逻辑结构</h3><p>​        指数据元素之间的逻辑关系，即从逻辑关系上描述数据。与数据的存储无关，是独立于计算机的。数据的逻辑结构分为<strong>线性和非线性结构</strong>。</p>
-<p>​        线性表是典型的线性结构，集合、图和树是典型的非线性结构。</p>
-<h3 id="数据的存储结构"><a href="#数据的存储结构" class="headerlink" title="数据的存储结构"></a>数据的存储结构</h3><p>​        指数据结构在计算机中的表示，也称物理结构。包括数据元素的表示和关系的表示。数据的存储结构是用计算机语言实现的逻辑结构，依赖于计算机语言。存储结构主要有<strong>顺序存储、链式存储、索引存储和散列存储</strong>。</p>
-<h4 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h4><p>​        逻辑上相邻的元素存储在物理位置上也相邻的存储单元中。优点是可以实现随机存取，每个元素占用最少的存储空间；缺点是必须使用相邻的一整块存储单元，可能造成较多的外部碎片。</p>
-<h4 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h4><p>​        不要求逻辑上相邻的数据元素物理位置上也相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。优点是不会产生碎片现象，可以充分利用所有存储单元；缺点是每个元素因存储指针而占用额外的地址空间，且只能实现顺序存取。</p>
-<h4 id="索引存储"><a href="#索引存储" class="headerlink" title="索引存储"></a>索引存储</h4><p>​        在存储元素信息的同时，还建立附加的索引表。</p>
-<p>​        索引表中每项成为<strong>索引项</strong>，索引项的一般形式为（关键字，地址）。其优点是检索速度快；缺点是索引表额外占用存储空间。另外，增删数据时也需要更改索引表，因而会花费较多时间。</p>
-<h4 id="散列存储"><a href="#散列存储" class="headerlink" title="散列存储"></a>散列存储</h4><p>​        根据元素的关键字直接计算出元素的存储地址，又称哈希（Hash）存储。其优点是检索、增加和删除结点的操作都很快。缺点是若散列函数不好，则可能出现元素存储单元冲突，而解决冲突会增加时间和空间开销。</p>
-<h3 id="数据的运算"><a href="#数据的运算" class="headerlink" title="数据的运算"></a>数据的运算</h3><p>​        施加在数据上的运算包括运算的定义和实现。定义是针对逻辑结构，指出运算的功能。实现是针对存储结构，指出运算的具体操作步骤。</p>
-<h1 id="算法和算法评价"><a href="#算法和算法评价" class="headerlink" title="算法和算法评价"></a>算法和算法评价</h1><h2 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h2><p>​        算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每条指令表示一个或多个操作。此外还有5个重要特性：</p>
-<h3 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h3><p>​        算法必须在执行有限步后结束，且每一步都要在有限时间内完成。</p>
-<h3 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h3><p>​        算法中每条指令必须有确切的含义，对于相同的输入只能得到相同的输出。</p>
-<h3 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h3><p>​        算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>​        一个算法有0个或多个输入，取自与某个特定的对象的集合。</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>​        一个算法有0个或多个输出，这些输出是与输入有着某种特定关系的量。</p>
+<p>​				<strong>（1）逻辑结构</strong></p>
+<p>​				<strong>（2）存储结构</strong></p>
+<p>​				<strong>（3）数据的运算</strong></p>
+<p>​	</p>
+<p>​		数据的逻辑结构和存储结构是密不可分的两个方面，一个算法的设计取决于所选定的逻辑结构，而算法的实现依赖于所采用的存储结构。</p>
+<h2 id="数据结构三要素"><a href="#数据结构三要素" class="headerlink" title="数据结构三要素"></a>数据结构三要素</h2><h3 id="数据的逻辑结构"><a href="#数据的逻辑结构" class="headerlink" title="数据的逻辑结构"></a>数据的逻辑结构</h3><p>​		指数据元素之间的逻辑关系，即从逻辑关系上描述数据。与数据的存储无关，是独立于计算机的。数据的逻辑结构分为<strong>线性和非线性结构</strong>。</p>
+<p>​		线性表是典型的线性结构，集合、图和树是典型的非线性结构。</p>
+<h3 id="数据的存储结构"><a href="#数据的存储结构" class="headerlink" title="数据的存储结构"></a>数据的存储结构</h3><p>​		指数据结构在计算机中的表示，也称物理结构。包括数据元素的表示和关系的表示。数据的存储结构是用计算机语言实现的逻辑结构，依赖于计算机语言。存储结构主要有<strong>顺序存储、链式存储、索引存储和散列存储</strong>。</p>
+<h4 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h4><p>​		逻辑上相邻的元素存储在物理位置上也相邻的存储单元中。优点是可以实现随机存取，每个元素占用最少的存储空间；缺点是必须使用相邻的一整块存储单元，可能造成较多的外部碎片。</p>
+<h4 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h4><p>​		不要求逻辑上相邻的数据元素物理位置上也相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。优点是不会产生碎片现象，可以充分利用所有存储单元；缺点是每个元素因存储指针而占用额外的地址空间，且只能实现顺序存取。</p>
+<h4 id="索引存储"><a href="#索引存储" class="headerlink" title="索引存储"></a>索引存储</h4><p>​		在存储元素信息的同时，还建立附加的索引表。</p>
+<p>​		索引表中每项成为<strong>索引项</strong>，索引项的一般形式为（关键字，地址）。其优点是检索速度快；缺点是索引表额外占用存储空间。另外，增删数据时也需要更改索引表，因而会花费较多时间。</p>
+<h4 id="散列存储"><a href="#散列存储" class="headerlink" title="散列存储"></a>散列存储</h4><p>​		根据元素的关键字直接计算出元素的存储地址，又称哈希（Hash）存储。其优点是检索、增加和删除结点的操作都很快。缺点是若散列函数不好，则可能出现元素存储单元冲突，而解决冲突会增加时间和空间开销。</p>
+<h3 id="数据的运算"><a href="#数据的运算" class="headerlink" title="数据的运算"></a>数据的运算</h3><p>​		施加在数据上的运算包括运算的定义和实现。定义是针对逻辑结构，指出运算的功能。实现是针对存储结构，指出运算的具体操作步骤。</p>
+<h1 id="算法和算法评价"><a href="#算法和算法评价" class="headerlink" title="算法和算法评价"></a>算法和算法评价</h1><h2 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h2><p>​		算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每条指令表示一个或多个操作。此外还有5个重要特性：</p>
+<h3 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h3><p>​		算法必须在执行有限步后结束，且每一步都要在有限时间内完成。</p>
+<h3 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h3><p>​		算法中每条指令必须有确切的含义，对于相同的输入只能得到相同的输出。</p>
+<h3 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h3><p>​		算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>​		一个算法有0个或多个输入，取自与某个特定的对象的集合。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>​		一个算法有0个或多个输出，这些输出是与输入有着某种特定关系的量。</p>
 <p>一个好的算法应该考虑达到以下目标：</p>
-<h3 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h3><p>​        算法应正确的解决问题。</p>
-<h3 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h3><p>​        算法应具有良好的可读性，以帮助人们理解。</p>
-<h3 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h3><p>​        输入非法数据时，算法能适当地作出反应或进行处理，而不会产生莫名其妙的输出结果。</p>
-<h3 id="效率与低存储量需求"><a href="#效率与低存储量需求" class="headerlink" title="效率与低存储量需求"></a>效率与低存储量需求</h3><p>​        效率是指算法执行的时间，存储量需求是指算法执行过程中所需要的最大存储空间，这两者都与问题规模有关。</p>
-<h2 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h2><h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>​        一个语句的频度是指该语句在算法中被重复执行的次数。算法中所有语句的频度之和记为 <em>T(n)</em> ,它是该算法问题规模 <em>n</em> 的函数，时间复杂度主要分析 <em>T(n)</em> 的数量级。</p>
-<p>​        算法中基本运算（最深层循环内的语句）的频度和 <em>T(n)</em> 同数量级，所以通常采用算法中基本运算的频度 <em>f(n)</em> 来分析算法的时间复杂度。因此，算法的时间复杂度记为</p>
-<script type="math/tex; mode=display">
-T（n)=O(f(n))</script><p>​         <em>O</em> 的含义是 <em>T(n)</em> 的数量级。</p>
-<p>​        <strong>最坏时间复杂度</strong>是指在最坏情况下，算法的时间复杂度。</p>
-<p>​        <strong>平均时间复杂度</strong>是指所有可能输入实例在等概率出现的情况下，算法的期望运行时间。</p>
-<p>​        <strong>最好时间复杂度</strong>是指在最好情况下，算法的时间复杂度。</p>
-<p>常见的渐进时间复杂度为</p>
-<script type="math/tex; mode=display">
-O(1)<O(log2n)<O(n)<O(nlog_2n)<O(n^2)<O(n^3)<O(2^n)<O(n!)<O(n^n)</script><h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>​        算法的空间复杂度 <em>S(n)</em> 定义为该算法所耗费的存储空间，他是问题规模 <em>n</em> 的函数。</p>
-<script type="math/tex; mode=display">
-S(n)=O(g(n))</script>]]></content>
+<h3 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h3><p>​		算法应正确的解决问题。</p>
+<h3 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h3><p>​		算法应具有良好的可读性，以帮助人们理解。</p>
+<h3 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h3><p>​		输入非法数据时，算法能适当地作出反应或进行处理，而不会产生莫名其妙的输出结果。</p>
+<h3 id="效率与低存储量需求"><a href="#效率与低存储量需求" class="headerlink" title="效率与低存储量需求"></a>效率与低存储量需求</h3><p>​		效率是指算法执行的时间，存储量需求是指算法执行过程中所需要的最大存储空间，这两者都与问题规模有关。</p>
+<h2 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h2><h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>​		一个语句的频度是指该语句在算法中被重复执行的次数。算法中所有语句的频度之和记为 <em>T(n)</em> ,它是该算法问题规模 <em>n</em> 的函数，时间复杂度主要分析 <em>T(n)</em> 的数量级。</p>
+<p>​		算法中基本运算（最深层循环内的语句）的频度和 <em>T(n)</em> 同数量级，所以通常采用算法中基本运算的频度 <em>f(n)</em> 来分析算法的时间复杂度。因此，算法的时间复杂度记为<br>$$<br>T（n)&#x3D;O(f(n))<br>$$<br>​		 <em>O</em> 的含义是 <em>T(n)</em> 的数量级。</p>
+<p>​		<strong>最坏时间复杂度</strong>是指在最坏情况下，算法的时间复杂度。</p>
+<p>​		<strong>平均时间复杂度</strong>是指所有可能输入实例在等概率出现的情况下，算法的期望运行时间。</p>
+<p>​		<strong>最好时间复杂度</strong>是指在最好情况下，算法的时间复杂度。</p>
+<p>常见的渐进时间复杂度为<br>$$<br>O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog_2n)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)<br>$$</p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>​		算法的空间复杂度 <em>S(n)</em> 定义为该算法所耗费的存储空间，他是问题规模 <em>n</em> 的函数。<br>$$<br>S(n)&#x3D;O(g(n))<br>$$</p>
+]]></content>
       <categories>
         <category>数据结构和算法</category>
       </categories>
@@ -234,18 +260,18 @@ S(n)=O(g(n))</script>]]></content>
     <url>/posts/f134a8e5/</url>
     <content><![CDATA[<p>​        Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>由于 Markdown 的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。 如 GitHub、Reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge、简书等，甚至还能被使用来撰写电子书。</p>
 <h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><p>字体倾斜：<em>Ctrl+I</em>   </p>
-<p>字体加粗：<strong>Ctrl+B </strong>    </p>
+<p>字体加粗：**Ctrl+B **    </p>
 <p>字体下划线：<u>Ctrl+U</u></p>
 <span id="more"></span>
+
 <p>标题：Ctrl+1-6（分别对应1-6级标题） 或 # 标题名 #（几级标题几个#）</p>
 <p>创建无序列表：*、+、-任意一个+空格（即：符号+空格）</p>
 <p>创建有序列表：1.、2.、3.+空格（即：数字.+空格）</p>
-<p>任务列表：- [ ] C/C++/Java/Python（中间有空格）</p>
+<p>任务列表：- [ ] C&#x2F;C++&#x2F;Java&#x2F;Python（中间有空格）</p>
 <p>插入超链接：Ctrl+K 【按住Ctrl，点击该链接就可访问】</p>
-<p><a href="https://www.baidu.com">百度一下</a>在[]中填写链接显示的内容，()中填写链接</p>
+<p><a href="https://www.baidu.com/">百度一下</a>在[]中填写链接显示的内容，()中填写链接</p>
 <p>插入图片：Ctrl+Shift+I </p>
 <p>插入表格：Ctrl+T 或 |表头1|表头2|……|表头n|+回车（可直接生成n列的表格）</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -254,8 +280,7 @@ S(n)=O(g(n))</script>]]></content>
 <th></th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td></td>
 <td></td>
 <td></td>
@@ -268,15 +293,18 @@ S(n)=O(g(n))</script>]]></content>
 <tr>
 <td></td>
 <td></td>
+<td></td>
 </tr>
-</tbody>
-</table>
-</div>
-<p>插入程序代码块： ```+回车（回车后可切换语言，当语言为flow时，可得到流程图）</p>
+</tbody></table>
+<p>插入程序代码块： &#96;&#96;&#96;+回车（回车后可切换语言，当语言为flow时，可得到流程图）</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
-<p>插入数学表达式：$$+回车或 Ctrl+Shift+M</p>
-<script type="math/tex; mode=display">
-s=vt</script><p>引用文字：Ctrl+Shift+Q 或 &gt;+空格</p>
+
+
+
+
+
+<p>插入数学表达式：$$+回车或 Ctrl+Shift+M<br>$$<br>s&#x3D;vt<br>$$</p>
+<p>引用文字：Ctrl+Shift+Q 或 &gt;+空格</p>
 <blockquote>
 <p>引用此段文字</p>
 </blockquote>
@@ -291,18 +319,25 @@ s=vt</script><p>引用文字：Ctrl+Shift+Q 或 &gt;+空格</p>
 <p>[toc]</p>
 <p>返回Typora顶部：Ctrl+Home</p>
 <p>返回Typora底部：Ctrl+End</p>
-<p>水平分割线：<em>*</em>+回车 或 —-+回车</p>
+<p>水平分割线：***+回车 或 —+回车</p>
 <hr>
 <p>上标：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;sup&gt;文字&lt;/sup&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <p><sup>文字</sup></p>
 <p>下标：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;sub&gt;文字&lt;/sub&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <p><sub> 文字 </sub></p>
 <p>高亮：文字【需要在偏好设置下Markdown下设置】</p>
 <p> 【注意：符号与内容、符号与符号之间均没有空格】</p>
 <p>文字居中：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;内容&lt;/center&gt;</span><br></pre></td></tr></table></figure>
+
 <center>helloworld</center>
 
 
