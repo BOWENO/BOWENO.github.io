@@ -21,7 +21,7 @@
 <h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>​		本人使用<strong>visual studio 2022</strong>进行开发，使用<strong>easyX</strong>的图形库。</p>
 <p>​		VS2022和easyX图形库可以直接去官网下载，在此不详细阐述。</p>
 <h1 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h1><h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><p>​		首先，我们创建一个空项目。</p>
-<p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211172933259.png" alt="创建空项目"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211172933259.png" alt="创建空项目"></p>
 <p>​		在源文件添加空白项目等一系列基础操作完成项目创建。</p>
 <p>​		接下来我首先考虑的是怎样构建一个游戏界面。</p>
 <h2 id="2-创建游戏窗口"><a href="#2-创建游戏窗口" class="headerlink" title="2.创建游戏窗口"></a>2.创建游戏窗口</h2><p>​		需要做的事情有很多，肯定要写多个函数来帮助游戏正常运行，所以一定需要一个初始化函数来对游戏刚开始的所有值进行初始化。</p>
@@ -35,7 +35,7 @@
 
 <p>​		然后再在init函数中加入initgraph，将值定位WIN_WIDTH和WIN_HEIGHT。</p>
 <p>关于initgraph函数的说明，easyX官方文档上有说明：</p>
-<p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211175044263.png" alt="initgraph函数说明"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211175044263.png" alt="initgraph函数说明"></p>
 <h2 id="3-加载背景资源"><a href="#3-加载背景资源" class="headerlink" title="3.加载背景资源"></a>3.加载背景资源</h2><p>​		平时我们游玩的游戏，看到的是玩家操控的人物在不断跑动然后跨越一个个障碍物，但是在界面中，人物具体坐标一般都是不变的，那为何会感觉是人物在运动呢？</p>
 <p>​		第一，人物的确在动，但并非是左右运动（如未碰到障碍物或者加速道具），而是跑动的图像不断切换，其实是原地跑步。</p>
 <p>​		第二，背景在不断向后（左）运动，相对比，显得人物在往前（右）跑动。</p>
@@ -53,8 +53,8 @@
 <p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211181231195.png" alt="sprintf函数解释"></p>
 <p>​		简而言之就是将背景图片路径赋予name这个变量中，然后在之后的loadimage()中直接用name代替，使编程更加方便。</p>
 <p>​		loadimage()是easyx.h提供的函数，用于加载图片，函数解释如下：</p>
-<p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211181836977.png" alt="loadimage格式解释"></p>
-<p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211181855549.png" alt="loadimage参数解释"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211181836977.png" alt="loadimage格式解释"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211181855549.png" alt="loadimage参数解释"></p>
 <p>写的代码段中实现加载name图片保存至imgBgs[i]中。</p>
 ]]></content>
       <categories>
