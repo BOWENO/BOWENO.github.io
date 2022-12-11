@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>我的天天酷跑-C语言项目</title>
+    <url>/posts/2e8d8a6e/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一个简单的C语言小项目，仿照曾经风靡一时的一个小游戏——天天酷跑。我还是初中的时候可喜欢玩这个了，据说现在仍然在运营但是策划为了…你懂的哈哈哈。话不多说，先对项目进行一个规划和设计。</p>
+<h1 id="项目设计"><a href="#项目设计" class="headerlink" title="项目设计"></a>项目设计</h1><p>这款游戏大家应该都有玩过，或者听说过。游戏内容很简单，就是一个横板跑酷类游戏。我使用<strong>visual studio2022</strong>进行开发，使用<strong>easyX</strong>的图形库。</p>
+<p>首先，我们要实现的功能是：</p>
+<p>载入等待页面；</p>
+<p>等待开始大厅；</p>
+<p>游戏玩家人物奔跑；</p>
+<p>玩家人物跳跃；</p>
+<p>玩家人物碰到障碍物反应；</p>
+<p>障碍物难度时间变化机制；</p>
+<p>评分计算机制；</p>
+<p>游戏结束返回；</p>
+]]></content>
+      <categories>
+        <category>C语言项目实训</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>线性表</title>
     <url>/posts/8aca8f82/</url>
     <content><![CDATA[<h1 id="线性表的定义和基本操作"><a href="#线性表的定义和基本操作" class="headerlink" title="线性表的定义和基本操作"></a>线性表的定义和基本操作</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>​        <strong>线性表</strong>是具有 <u>相同</u> 数据类型的 n (n&gt;=0)个数据元素的 <u>有限序列</u> 。</p>
