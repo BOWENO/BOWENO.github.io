@@ -14,6 +14,7 @@
 <p>障碍物难度时间变化机制；</p>
 <p>评分计算机制；</p>
 <p>游戏结束返回；</p>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>C语言项目实训</category>
@@ -160,8 +161,7 @@
 <p>​        循环单链表的插入、删除算法和单链表几乎一样，不同的是若在表尾进行，则执行操作不同，以让单链表继续保持循环的性质。</p>
 ]]></content>
       <categories>
-        <category>数据结构与算法</category>
-        <category>data structures &amp; algorithms</category>
+        <category>数据结构和算法</category>
       </categories>
       <tags>
         <tag>线性表</tag>
@@ -221,7 +221,6 @@ O(1)<O(log2n)<O(n)<O(nlog_2n)<O(n^2)<O(n^3)<O(2^n)<O(n!)<O(n^n)</script><h3 id="
 S(n)=O(g(n))</script>]]></content>
       <categories>
         <category>数据结构和算法</category>
-        <category>data structures &amp; algorithms</category>
       </categories>
       <tags>
         <tag>数据元素</tag>
