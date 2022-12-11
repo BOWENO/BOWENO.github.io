@@ -30,7 +30,7 @@
 
 
 <p>​		整个游戏肯定是需要大量的图片素材的，如果有读者也想写一个练练手可以联系我的邮箱来获取游戏图片资源。</p>
-<p>​		完成游戏窗口的创建很简单，直接使用easyX提供的initgraph函数即可，记得头文件要导入tools.h文件。由于图片素材限制，我将窗口的大小定为1012*396。</p>
+<p>​		完成游戏窗口的创建很简单，直接使用easyX提供的initgraph函数即可，记得头文件要包含graphics.h文件。由于图片素材限制，我将窗口的大小定为1012*396。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">define WIN_WIDTH <span class="number">1012</span></span><br><span class="line">define WIN_HEIGHT <span class="number">396</span></span><br></pre></td></tr></table></figure>
 
 <p>​		然后再在init函数中加入initgraph，将值定位WIN_WIDTH和WIN_HEIGHT。</p>
@@ -43,25 +43,57 @@
 <p>​		所以，这一步要做到的是加载背景资源，并让背景图片不断倒退运动，形成循环。</p>
 <p>​		背景分为三部分，蓝天，树林和土地。游戏中蓝天离人物最远，土地离人物最近。所以我们也需要用三张背景图片来构成。</p>
 <p>​		同样，这一步也是在<strong>init函数</strong>中进行。</p>
-<p>​		加载背景图片肯定需要用到一个函数来读取图片。同样，easyX为我们提供了一个函数<strong>loadimage()<strong>，我们使用loadimage函数来读取图片的路径加载图片，因为有三张图片，所以我建立一个数组imgBgs[3]来储存背景图片，然后借助</strong>for循环</strong>来进行。</p>
+<p>​		加载背景图片肯定需要用到一个函数来读取图片。同样，easyX为我们提供了一个函数<strong>loadimage()</strong> ，我们使用loadimage函数来读取图片的路径加载图片，因为有三张图片，所以我建立一个数组imgBgs[3]来储存背景图片，然后借助 <strong>for循环</strong>来进行。</p>
 <p>​		代码如下：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> name[<span class="number">64</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">		<span class="comment">//&quot;res/bg001.png&quot; &quot;res/bg002.png&quot; &quot;res/bg003.png&quot;</span></span><br><span class="line">		<span class="built_in">sprintf</span>(name, <span class="string">&quot;res/bg%03d.png&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">		loadimage(&amp;imgBgs[i], name);</span><br><span class="line"></span><br><span class="line">		bgX[i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​		注释中res&#x2F;bg00x.png是背景图片资源路径，因人而异，我是直接在项目地址新建res文件夹放入图片。</p>
 <p>​		这里可能会有初学者没见过的函数**sprintf()**，此函数也是官方stdio.h文件中提供的。</p>
 <p>​		函数解释如下：</p>
-<p><img src="/../%E6%88%91%E7%9A%84%E5%A4%A9%E5%A4%A9%E9%85%B7%E8%B7%91/image-20221211181231195.png" alt="sprintf函数解释"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211181231195.png" alt="sprintf函数解释"></p>
 <p>​		简而言之就是将背景图片路径赋予name这个变量中，然后在之后的loadimage()中直接用name代替，使编程更加方便。</p>
 <p>​		loadimage()是easyx.h提供的函数，用于加载图片，函数解释如下：</p>
 <p><img src="/posts/2e8d8a6e/image-20221211181836977.png" alt="loadimage格式解释"></p>
 <p><img src="/posts/2e8d8a6e/image-20221211181855549.png" alt="loadimage参数解释"></p>
-<p>写的代码段中实现加载name图片保存至imgBgs[i]中。</p>
+<p>​		写的代码段中实现加载name图片保存至imgBgs[i]指针中。</p>
+<h2 id="4-渲染游戏背景"><a href="#4-渲染游戏背景" class="headerlink" title="4.渲染游戏背景"></a>4.渲染游戏背景</h2><p>​		这一步就是把预先加载好的图片资源，绘制到游戏窗口中进行渲染，并且让背景“动起来”。同样，easyX图形库中有着putimage函数来帮助我们做到这一点。putimage()函数解释如下：</p>
+<p><img src="/posts/2e8d8a6e/image-20221211195240816.png" alt="putimage函数解释"></p>
+<p>​		第一步，要将图片加载到窗口内，我们创建一个新的函数updateBg()用来把背景图片放置到游戏界面内，同时，我们估算一下图片应该放置的位置，最远处是蓝天，接着是山，最近处是草坪。根据图片高度，X坐标都为0，Y坐标分别设置为0，119，330。若想令图片向左移动，也就是说让X坐标不断减小，来达到图片左移的效果，所以在提前定义一个数组bgX[3]，用于存放图片X坐标。图片移动放在后面另一个函数fly()来实现。</p>
+<p>​		在这里，可以试运行一下，运行结果如下：</p>
+<p><img src="/posts/2e8d8a6e/image-20221211195618492.png" alt="putimage运行结果"></p>
+<p>​		会发现一个很严重的问题，三张图片都出现了明显的黑边。这是怎么回事呢？</p>
+<p>​		easyX官方文档上有写：加载的gif、png图片中均不支持透明。所以我们使用easyX给的putimage()就会出现这个状况。</p>
+<p>​		网络上有专门解决这种问题的第三方资源包，导入进去使用第三方给的函数即可解决。</p>
+<p>​		如果找不到合适的，也可以联系的邮箱来获取我使用的。</p>
+<p>​		我的代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//渲染游戏背景</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">updateBg</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="comment">//使用easyX的putimage会有黑边</span></span><br><span class="line">	<span class="comment">//putimage(bgX[0], 0, &amp;imgBgs[0]);</span></span><br><span class="line">	<span class="comment">//putimage(bgX[1], 119, &amp;imgBgs[1]);</span></span><br><span class="line">	<span class="comment">//putimage(bgX[2], 330, &amp;imgBgs[2]);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*所以使用第三方开源tools.h中的putimagePNG函数来解决此问题</span></span><br><span class="line"><span class="comment">	putimagePNG(bgX[0], 0, &amp;imgBgs[0]);</span></span><br><span class="line"><span class="comment">	putimagePNG(bgX[1], 119, &amp;imgBgs[1]);</span></span><br><span class="line"><span class="comment">	putimagePNG(bgX[2], 330, &amp;imgBgs[2]);</span></span><br><span class="line"><span class="comment">	此时又出现一个问题就是该函数中x值无法取负数，所以使用另一个putimagePNG2函数来解决*/</span></span><br><span class="line">	putimagePNG2(bgX[<span class="number">0</span>], <span class="number">0</span>, &amp;imgBgs[<span class="number">0</span>]);</span><br><span class="line">	putimagePNG2(bgX[<span class="number">1</span>], <span class="number">119</span>, &amp;imgBgs[<span class="number">1</span>]);</span><br><span class="line">	putimagePNG2(bgX[<span class="number">2</span>], <span class="number">330</span>, &amp;imgBgs[<span class="number">2</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​		这时候再重新运行代码，输出如图：</p>
+<p><img src="/posts/2e8d8a6e/image-20221211200808356.png" alt="putimage2输出"></p>
+<p>​		渲染背景成功。</p>
+<p>​		这时候就可以让背景动起来了。怎么实现呢？这是创建另一个函数fly()。</p>
+<p>​		同样的，让图片不断向左移动，直到图片X坐标左移整个界面宽度的值时再将图片X坐标置0。很容易想到继续使用for循环来达到这个效果。</p>
+<p>​		代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">fly</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">		bgX[i] -= bgSpeed[i];</span><br><span class="line">		<span class="keyword">if</span> (bgX[i] &lt; -WIN_WIDTH)</span><br><span class="line">		&#123;</span><br><span class="line">			bgX[i] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​		三张图片循环的速度不同，最远处的循环速度最慢，所以设置三种不同的循环速度，定义一个bgSpeed[3]&#x3D;1，2，4。</p>
+<p>​		再次运行调试，发现图片动起来了，但是有一个小毛病，就是图片一直在闪烁。目前我的主函数是这样的：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">		updateBg();</span><br><span class="line">		fly();</span><br><span class="line">		Sleep(<span class="number">30</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​		当使用easyX绘制图形时，如果画面较复杂，画面就会出现闪烁、卡顿等情况，这时候使用easyX自己提供的BeginBatchDraw()进行预先批量绘图，后再使用EndBatchDraw()来结束批量绘制即可解决此问题。两个函数的官方解释如下：</p>
+<p><img src="/posts/2e8d8a6e/image-20221211223038303.png" alt="BeginBatchDraw"></p>
+<p><img src="/posts/2e8d8a6e/image-20221211223106918.png" alt="EndBatchDraw"></p>
+<p>​		将代码增加到主函数中：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) &#123;	</span><br><span class="line">		BeginBatchDraw();</span><br><span class="line">		updateBg();</span><br><span class="line">		EndBatchDraw();</span><br><span class="line">		fly();</span><br><span class="line">		Sleep(<span class="number">30</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​		重新调试运行，图片很流畅地加载出来并移动。</p>
 ]]></content>
       <categories>
         <category>C语言项目实训</category>
       </categories>
       <tags>
         <tag>C语言</tag>
+        <tag>easyX图形库</tag>
       </tags>
   </entry>
   <entry>
