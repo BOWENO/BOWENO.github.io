@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>高等数学（上）归纳与总结</title>
+    <url>/posts/1168b153/</url>
+    <content><![CDATA[<h1 id="第一章-函数与极限"><a href="#第一章-函数与极限" class="headerlink" title="第一章 函数与极限"></a>第一章 函数与极限</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>​		首先基础部分，要记住常用的等价无穷小代换和常用的麦克劳林公式。</p>
+<p><img src="/posts/1168b153/%E5%B8%B8%E7%94%A8%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F.png"></p>
+<p><img src="/posts/1168b153/%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80.png"></p>
+]]></content>
+      <categories>
+        <category>高等数学（上）</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>极限与函数</tag>
+        <tag>导数与微分</tag>
+        <tag>不定积分</tag>
+        <tag>定积分</tag>
+        <tag>多元微分</tag>
+        <tag>错题归纳</tag>
+        <tag>技巧总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的天天酷跑-C语言项目</title>
     <url>/posts/2e8d8a6e/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​		这是一个简单的C语言小项目，仿照曾经风靡一时的一个小游戏——天天酷跑。我还是初中的时候可喜欢玩这个了，据说现在仍然在运营但是策划为了…你懂的哈哈哈。话不多说，先对项目进行一个规划和设计。</p>
